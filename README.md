@@ -43,3 +43,4 @@ type CoverageOptions = {
 
 ## Time Estimate
 ~45 minutes
+# brite-practice-6
