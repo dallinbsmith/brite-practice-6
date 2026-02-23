@@ -1,1 +1,49 @@
 @import "tailwindcss";
+
+.cost-calculator {  
+    @apply flex flex-col gap-4 p-4;
+}
+
+.selection-area {
+    @apply flex flex-col gap-4 p-4;
+}
+
+.tiers {
+    @apply flex flex-col gap-4 p-4;
+}
+
+.add-ons {
+    @apply flex flex-col gap-4 p-4;
+}
+
+.cost-summary {
+    @apply flex flex-col gap-4 p-4;
+}
+
+.tier-option input {
+    @apply hidden;
+}
+
+.tier-option {
+    @apply border border-gray-300 rounded-md p-4 cursor-pointer;
+}
+
+.selected {
+    @apply bg-blue-500 text-white;
+}   
+
+.add-ons {
+    @apply flex flex-col gap-4 p-4;
+}
+
+.add-on-option input {
+    @apply hidden;
+}
+
+.add-on-option {
+    @apply border border-gray-300 rounded-md p-4 cursor-pointer;
+}
+
+.selected {
+    @apply bg-blue-500 text-white;
+}   
