@@ -6,10 +6,6 @@ export const CostCalculator = ({ coverageOptions }: { coverageOptions: CoverageO
     const [selectedTier, setSelectedTier] = useState<string | null>(null);
     const [selectedAddOns, setSelectedAddOns] = useState<string[]>([]);
 
-    const handleTierSelection = (tierId: string) => {
-        setSelectedTier(tierId);
-    };
-    
     const handleAddOnToggleSelection = (addOnId: string) => {
         setSelectedAddOns((prev) => prev.includes(addOnId) ? prev.filter((id) => id !== addOnId) : [...prev, addOnId]);
     };
@@ -23,7 +19,7 @@ export const CostCalculator = ({ coverageOptions }: { coverageOptions: CoverageO
         <section className="tiers">
           <h2 className="text-2xl font-bold">Select Coverage Tier</h2>
           {tiers.map(({id, name, description, monthlyCost}) => (
-            <div key={id} className={`tier-option ${selectedTier === id ? 'selected' : ''}` } onClick={() => handleTierSelection(id)}>
+            <div key={id} className={`tier-option ${selectedTier === id ? 'selected' : ''}` } onClick={() => setSelectedTier(id)}>
               <input type="radio" name="tier"/>
               <label htmlFor={id}>{name}</label>
               <p>{description}</p>
